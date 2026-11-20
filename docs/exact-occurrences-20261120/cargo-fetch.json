@@ -1,0 +1,6 @@
+{
+  "exit": 0,
+  "seconds": 210.88,
+  "log": "C:\\Users\\DAVID\\Code\\otzaria-search-occurrences-20261120\\artifacts\\exact-occurrences-20261120\\cargo-fetch.log",
+  "operation": "cargo fetch --locked; dependency download only"
+}

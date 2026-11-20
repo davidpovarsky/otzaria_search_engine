@@ -1,0 +1,72 @@
+   Compiling search_engine v0.1.0 (C:\Users\DAVID\Code\otzaria-search-occurrences-20261120\rust)
+error[E0432]: unresolved import `tantivy::Postings`
+  --> src\exact_occurrences.rs:20:23
+   |
+20 | use tantivy::{DocSet, Postings, Searcher, SearcherGeneration, TERMINATED};
+   |                       ^^^^^^^^
+   |                       |
+   |                       no `Postings` in the root
+   |                       help: a similar name exists in the module: `postings`
+   |
+   = help: consider importing one of these items instead:
+           tantivy::index::SegmentComponent::Postings
+           tantivy::postings::Postings
+
+error[E0277]: `?` couldn't convert the error to `exact_occurrences::ExactOccurrenceError`
+   --> src\exact_occurrences.rs:304:84
+    |
+276 | ) -> Result<ExactTokenOccurrenceCount, ExactOccurrenceError> {
+    |      ------------------------------------------------------- expected `exact_occurrences::ExactOccurrenceError` because of this
+...
+304 |             inverted.read_postings(&term, IndexRecordOption::WithFreqsAndPositions)?
+    |                      --------------------------------------------------------------^ the trait `From<std::io::Error>` is not implemented for `exact_occurrences::ExactOccurrenceError`
+    |                      |
+    |                      this can't be annotated with `?` because it has type `Result<_, std::io::Error>`
+    |
+note: `exact_occurrences::ExactOccurrenceError` needs to implement `From<std::io::Error>`
+   --> src\exact_occurrences.rs:134:1
+    |
+134 | pub enum ExactOccurrenceError {
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    = note: the question mark operation (`?`) implicitly performs a conversion on the error value using the `From` trait
+    = help: the trait `From<std::io::Error>` is not implemented for `exact_occurrences::ExactOccurrenceError`
+            but trait `From<TantivyError>` is implemented for it
+    = help: for that trait implementation, expected `TantivyError`, found `std::io::Error`
+
+error[E0599]: no method named `term_freq` found for struct `SegmentPostings` in the current scope
+   --> src\exact_occurrences.rs:340:50
+    |
+340 |                     let raw_frequency = postings.term_freq();
+    |                                                  ^^^^^^^^^ method not found in `SegmentPostings`
+    |
+   ::: C:\Users\DAVID\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\tantivy-0.26.1\src\postings\postings.rs:15:8
+    |
+ 15 |     fn term_freq(&self) -> u32;
+    |        --------- the method is available for `SegmentPostings` here
+    |
+    = help: items from traits can only be used if the trait is in scope
+help: trait `Postings` which provides `term_freq` is implemented but not in scope; perhaps you want to import it
+    |
+ 13 + use tantivy::postings::Postings;
+    |
+
+error[E0599]: no method named `positions` found for struct `SegmentPostings` in the current scope
+   --> src\exact_occurrences.rs:360:30
+    |
+360 |                     postings.positions(&mut positions);
+    |                              ^^^^^^^^^ method not found in `SegmentPostings`
+    |
+   ::: C:\Users\DAVID\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\tantivy-0.26.1\src\postings\postings.rs:31:8
+    |
+ 31 |     fn positions(&mut self, output: &mut Vec<u32>) {
+    |        --------- the method is available for `SegmentPostings` here
+    |
+    = help: items from traits can only be used if the trait is in scope
+help: trait `Postings` which provides `positions` is implemented but not in scope; perhaps you want to import it
+    |
+ 13 + use tantivy::postings::Postings;
+    |
+
+Some errors have detailed explanations: E0277, E0432, E0599.
+For more information about an error, try `rustc --explain E0277`.
+error: could not compile `search_engine` (lib test) due to 4 previous errors

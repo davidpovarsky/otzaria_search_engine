@@ -4120,6 +4120,48 @@ impl SearchEngine {
         Self::surface_stream_error(&sink, result)
     }
 
+    /// Count distinct indexed positions for exactly one token produced by the
+    /// original mark-free exact analyzer. This Rust-only primitive never
+    /// interprets input as a phrase, regex, fuzzy or morphological query.
+    /// Success is exact for the returned Searcher generation, not a claim of
+    /// complete application-corpus coverage. No original search/count API changes.
+    #[frb(ignore)]
+    pub fn count_exact_token_occurrences(
+        &self,
+        query: &str,
+        facets: &[String],
+        control: &crate::exact_occurrences::ExactOccurrenceControl,
+    ) -> std::result::Result<
+        crate::exact_occurrences::ExactTokenOccurrenceCount,
+        crate::exact_occurrences::ExactOccurrenceError,
+    > {
+        use crate::exact_occurrences::{self, ExactOccurrenceError};
+        exact_occurrences::validate_request(query, facets, control)?;
+        let tokens = self.index_token_texts(query)
+            .map_err(|error| ExactOccurrenceError::Engine(error.to_string()))?;
+        if tokens.len() != 1 {
+            return Err(ExactOccurrenceError::SingleAnalyzedTokenRequired {
+                token_count: tokens.len(),
+            });
+        }
+        let analyzed_token = tokens.into_iter().next().expect("one token checked");
+        let mut requested_facets = facets.to_vec();
+        requested_facets.sort_unstable();
+        requested_facets.dedup();
+        let (original_query, truncated) = self.build_exact_query(
+            query, &requested_facets, &VocalizedFlags::new(false, false),
+        ).map_err(|error| ExactOccurrenceError::Engine(error.to_string()))?;
+        if truncated {
+            return Err(ExactOccurrenceError::PositionsUnavailable);
+        }
+        let term = Term::from_field_text(self.schema.get_field("text")?, &analyzed_token);
+        let searcher = self.index_reader.searcher();
+        exact_occurrences::count_on_snapshot(
+            &searcher, term, analyzed_token, requested_facets,
+            original_query.as_ref(), INDEX_SCHEMA_VERSION, control,
+        )
+    }
+
     /// Exact-mode hit count. Drops the truncation flag: the mark-free path
     /// never truncates, but the vocalized single-word path can (its term set
     /// is materialized like an advanced word) — use

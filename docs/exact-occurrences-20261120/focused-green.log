@@ -1,0 +1,40 @@
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 7.41s
+     Running unittests src\lib.rs (rust\target\debug\deps\search_engine-7c9345451b6335dc.exe)
+
+running 19 tests
+test exact_occurrences::tests::cancellation_after_real_positions_are_read_discards_the_accumulated_count ... ok
+[2026-11-20T00:57:32Z INFO  search_engine::api::search_engine] commit: 79.2705ms (reader reload 26.8345ms)
+test exact_occurrences::tests::cancelled_and_expired_invocations_cannot_publish_a_count ... ok
+[2026-11-20T00:57:32Z INFO  search_engine::api::search_engine] commit: 125.9234ms (reader reload 12.4922ms)
+test exact_occurrences::tests::candidate_document_budget_returns_error_instead_of_partial_count ... ok
+[2026-11-20T00:57:32Z INFO  search_engine::api::search_engine] commit: 95.3358ms (reader reload 74.7342ms)
+test exact_occurrences::tests::complete_zero_is_distinct_from_unsupported_empty_query ... ok
+[2026-11-20T00:57:32Z INFO  search_engine::api::search_engine] commit: 121.9218ms (reader reload 11.0212ms)
+[2026-11-20T00:57:33Z INFO  search_engine::api::search_engine] commit: 391.0389ms (reader reload 24.7532ms)
+test exact_occurrences::tests::count_is_not_a_page_size_or_distinct_document_count ... ok
+[2026-11-20T00:57:33Z INFO  search_engine::api::search_engine] commit: 170.3772ms (reader reload 13.5036ms)
+test exact_occurrences::tests::counts_all_original_segments_and_ignores_uncommitted_documents ... ok
+test exact_occurrences::tests::duplicate_stacked_positions_in_a_real_index_count_once ... ok
+[2026-11-20T00:57:33Z INFO  search_engine::api::search_engine] commit: 134.5117ms (reader reload 9.0018ms)
+[2026-11-20T00:57:33Z INFO  search_engine::api::search_engine] optimize: 2 → 1 segments in 126.7913ms
+[2026-11-20T00:57:33Z INFO  search_engine::api::search_engine] commit: 13.2732ms (reader reload 5.7389ms)
+test exact_occurrences::tests::deleted_documents_are_excluded_and_delete_snapshot_is_retained ... ok
+test exact_occurrences::tests::hostile_overflow_sized_budgets_are_rejected ... ok
+test exact_occurrences::tests::missing_position_storage_is_unsupported_even_when_no_hit_exists ... ok
+test exact_occurrences::tests::one_held_searcher_snapshot_survives_a_new_commit_without_mixing_counts ... ok
+[2026-11-20T00:57:33Z INFO  search_engine::api::search_engine] commit: 166.1813ms (reader reload 12.0502ms)
+test exact_occurrences::tests::original_facet_or_within_dimension_and_and_between_dimensions ... ok
+[2026-11-20T00:57:33Z INFO  search_engine::api::search_engine] commit: 68.6755ms (reader reload 8.0182ms)
+test exact_occurrences::tests::original_hebrew_marks_boundaries_and_case_normalization_are_preserved ... ok
+test exact_occurrences::tests::oversized_queries_and_facets_fail_without_an_exact_value ... ok
+[2026-11-20T00:57:33Z INFO  search_engine::api::search_engine] commit: 71.089ms (reader reload 7.2383ms)
+test exact_occurrences::tests::position_budgets_apply_before_materializing_an_oversized_document ... ok
+[2026-11-20T00:57:33Z INFO  search_engine::api::search_engine] commit: 73.3252ms (reader reload 10.1149ms)
+test exact_occurrences::tests::quote_free_synonym_positions_are_not_double_counted ... ok
+[2026-11-20T00:57:34Z INFO  search_engine::api::search_engine] commit: 86.4606ms (reader reload 8.6271ms)
+test exact_occurrences::tests::repeated_token_counts_positions_while_original_api_stays_document_count ... ok
+[2026-11-20T00:57:34Z INFO  search_engine::api::search_engine] commit: 85.1877ms (reader reload 10.2363ms)
+test exact_occurrences::tests::segment_budget_is_checked_before_collection ... ok
+test exact_occurrences::tests::expiry_after_the_last_real_match_still_cannot_publish_exact_success ... ok
+
+test result: ok. 19 passed; 0 failed; 0 ignored; 0 measured; 345 filtered out; finished in 2.79s

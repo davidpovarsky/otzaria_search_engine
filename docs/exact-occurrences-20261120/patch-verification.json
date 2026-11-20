@@ -1,0 +1,16 @@
+{
+  "base": "265a14ea54f959a3e266d6e8acfa3a3b98101d68",
+  "patch_sha256": "be2e2da1eabba22ec8a99178c0c8e2b450a6e478243d147a55947d8770a522df",
+  "patch_bytes": 37902,
+  "pristine_base_index_apply_check_exit": 0,
+  "stderr": "",
+  "source_paths": [
+    "rust/src/lib.rs",
+    "rust/src/api/search_engine.rs",
+    "rust/src/exact_occurrences.rs",
+    "rust/src/exact_occurrences/tests.rs"
+  ],
+  "artifact": "source.patch.gz",
+  "compressed_sha256": "bb370e5357fd5b7f73eda342cf784df2bba764561e213f601bb6b99913b5a8d2",
+  "compressed_bytes": 8651
+}

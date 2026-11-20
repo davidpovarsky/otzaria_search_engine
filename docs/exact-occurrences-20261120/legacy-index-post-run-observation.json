@@ -1,0 +1,28 @@
+{
+  "observed_at_utc": "2026-11-20T00:58:35.655701+00:00",
+  "path": "C:\\אוצריא\\index",
+  "existed_when_observed": true,
+  "pre_run_snapshot_available": false,
+  "metadata_write_not_seen": "otzaria_index_meta.json not present",
+  "file_count": 180,
+  "latest_mtime_utc": "2026-06-22T19:43:51.982830+00:00",
+  "latest_creation_utc": "2026-06-22T19:43:51.962872+00:00",
+  "metadata_files": [
+    {
+      "name": ".managed.json",
+      "directory": false,
+      "bytes": 7090,
+      "mtime_utc": "2026-06-22T19:42:36.589395+00:00",
+      "creation_utc": "2026-06-22T19:42:36.588383+00:00"
+    },
+    {
+      "name": "meta.json",
+      "directory": false,
+      "bytes": 5183,
+      "mtime_utc": "2026-06-22T19:43:51.962872+00:00",
+      "creation_utc": "2026-06-22T19:43:51.962872+00:00"
+    }
+  ],
+  "full_observation_sha256": "8c618d2df3b3bcaeb676079f028c1a642b7e3ac8327355211c09c2f970a43f49",
+  "claim": "After-only observation; no before snapshot or byte-identity claim. Full filename inventory retained only in the isolated local build directory."
+}

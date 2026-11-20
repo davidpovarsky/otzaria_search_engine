@@ -1,4 +1,6 @@
 pub mod api;
+// Rust-only bounded occurrence primitive; no generated Dart/C binding.
+pub mod exact_occurrences;
 mod display_highlight;
 mod frb_generated;
 // אכיפת מרווח פר-זוג לשאילתות ביטוי — מחוץ ל-crate::api כדי ש-FRB לא ינסה

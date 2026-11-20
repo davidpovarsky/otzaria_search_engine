@@ -1,0 +1,51 @@
+   Compiling search_engine v0.1.0 (C:\Users\DAVID\Code\otzaria-search-occurrences-20261120\rust)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 2m 33s
+     Running unittests src\lib.rs (rust\target\debug\deps\search_engine-7c9345451b6335dc.exe)
+
+running 19 tests
+test exact_occurrences::tests::cancellation_after_real_positions_are_read_discards_the_accumulated_count ... ok
+[2026-11-20T00:50:40Z INFO  search_engine::api::search_engine] commit: 262.4903ms (reader reload 8.4279ms)
+test exact_occurrences::tests::cancelled_and_expired_invocations_cannot_publish_a_count ... ok
+[2026-11-20T00:50:40Z INFO  search_engine::api::search_engine] commit: 417.9116ms (reader reload 10.8227ms)
+test exact_occurrences::tests::candidate_document_budget_returns_error_instead_of_partial_count ... ok
+[2026-11-20T00:50:40Z INFO  search_engine::api::search_engine] commit: 194.1672ms (reader reload 10.3095ms)
+test exact_occurrences::tests::complete_zero_is_distinct_from_unsupported_empty_query ... ok
+[2026-11-20T00:50:41Z INFO  search_engine::api::search_engine] commit: 238.5115ms (reader reload 20.7007ms)
+[2026-11-20T00:50:41Z INFO  search_engine::api::search_engine] commit: 256.2329ms (reader reload 17.4358ms)
+test exact_occurrences::tests::counts_all_original_segments_and_ignores_uncommitted_documents ... ok
+[2026-11-20T00:50:41Z INFO  search_engine::api::search_engine] commit: 813.7852ms (reader reload 82.0364ms)
+test exact_occurrences::tests::count_is_not_a_page_size_or_distinct_document_count ... ok
+test exact_occurrences::tests::duplicate_stacked_positions_in_a_real_index_count_once ... ok
+[2026-11-20T00:50:41Z INFO  search_engine::api::search_engine] commit: 337.3307ms (reader reload 55.3384ms)
+[2026-11-20T00:50:41Z INFO  search_engine::api::search_engine] commit: 62.1493ms (reader reload 1.6266ms)
+
+thread 'exact_occurrences::tests::deleted_documents_are_excluded_and_delete_snapshot_is_retained' (34356) panicked at src\exact_occurrences\tests.rs:182:5:
+assertion failed: after.proof.searcher_generation.segments().values().any(Option::is_some)
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+test exact_occurrences::tests::deleted_documents_are_excluded_and_delete_snapshot_is_retained ... FAILED
+test exact_occurrences::tests::hostile_overflow_sized_budgets_are_rejected ... ok
+test exact_occurrences::tests::missing_position_storage_is_unsupported_even_when_no_hit_exists ... ok
+test exact_occurrences::tests::one_held_searcher_snapshot_survives_a_new_commit_without_mixing_counts ... ok
+[2026-11-20T00:50:42Z INFO  search_engine::api::search_engine] commit: 280.5064ms (reader reload 32.5622ms)
+test exact_occurrences::tests::original_facet_or_within_dimension_and_and_between_dimensions ... ok
+[2026-11-20T00:50:42Z INFO  search_engine::api::search_engine] commit: 269.13ms (reader reload 9.7029ms)
+test exact_occurrences::tests::original_hebrew_marks_boundaries_and_case_normalization_are_preserved ... ok
+test exact_occurrences::tests::oversized_queries_and_facets_fail_without_an_exact_value ... ok
+[2026-11-20T00:50:42Z INFO  search_engine::api::search_engine] commit: 147.8439ms (reader reload 12.4602ms)
+test exact_occurrences::tests::position_budgets_apply_before_materializing_an_oversized_document ... ok
+[2026-11-20T00:50:43Z INFO  search_engine::api::search_engine] commit: 99.6717ms (reader reload 24.1319ms)
+test exact_occurrences::tests::quote_free_synonym_positions_are_not_double_counted ... ok
+[2026-11-20T00:50:43Z INFO  search_engine::api::search_engine] commit: 110.0199ms (reader reload 12.8454ms)
+test exact_occurrences::tests::repeated_token_counts_positions_while_original_api_stays_document_count ... ok
+[2026-11-20T00:50:43Z INFO  search_engine::api::search_engine] commit: 120.4425ms (reader reload 11.9218ms)
+test exact_occurrences::tests::segment_budget_is_checked_before_collection ... ok
+test exact_occurrences::tests::expiry_after_the_last_real_match_still_cannot_publish_exact_success ... ok
+
+failures:
+
+failures:
+    exact_occurrences::tests::deleted_documents_are_excluded_and_delete_snapshot_is_retained
+
+test result: FAILED. 18 passed; 1 failed; 0 ignored; 0 measured; 345 filtered out; finished in 3.59s
+
+error: test failed, to rerun pass `--lib`

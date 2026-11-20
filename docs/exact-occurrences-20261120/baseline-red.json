@@ -1,0 +1,19 @@
+{
+  "source": "265a14ea54f959a3e266d6e8acfa3a3b98101d68",
+  "command": [
+    "cargo",
+    "test",
+    "--locked",
+    "--manifest-path",
+    "rust/Cargo.toml",
+    "--test",
+    "exact_occurrence_baseline",
+    "--",
+    "--nocapture"
+  ],
+  "exit": 101,
+  "seconds": 226.82,
+  "kind": "original API semantic counterexample; not an upstream document-count bug",
+  "expected_failure": "two occurrences in one document must not return matching-document total 1",
+  "test_fixture_sha256": "edb393951ae52b85844d0589f7e594707f71abe49c0d82a1c58174fc4ce89965"
+}

@@ -1,0 +1,24 @@
+{
+  "command": [
+    "cargo",
+    "test",
+    "--locked",
+    "--manifest-path",
+    "rust/Cargo.toml",
+    "--lib",
+    "exact_occurrences::tests",
+    "--",
+    "--nocapture",
+    "--test-threads=2"
+  ],
+  "exit": 101,
+  "seconds": 19.49,
+  "source_sha256_lf": {
+    "rust/src/lib.rs": "6a7b6eac89e781fc7d141f036f0d58f3092be40c42bcca48735e0aa929d3de18",
+    "rust/src/api/search_engine.rs": "59a6ae51a038780d8a78d19952087b735e096373394347affc02160765973f75",
+    "rust/src/exact_occurrences.rs": "9f98af85c844ae4cfb7ec6d39ecee7386b85b40497e58ae21685a6efd0209881",
+    "rust/src/exact_occurrences/tests.rs": "e3d46f6d9b6cd0824ab5b2a28dfcfbf6d950341c7689faacb4da9a39dde692c4",
+    "rust/Cargo.toml": "3e9584afbfb53cd97ae08371ae17831c59652f12b6073f6ed1756d7e5e1f586d",
+    "rust/Cargo.lock": "d8cf629b23f9bf53028ddcca6f27ef7fdf8a0ee1e6e5807050c7f3d3eb5b04da"
+  }
+}
