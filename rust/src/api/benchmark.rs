@@ -522,9 +522,11 @@ mod tests {
     }
 
     #[test]
+    #[ignore = "requires an explicitly owned disposable diagnostic fixture"]
     fn test_run_benchmark_on_real_index() {
-        // This test runs the actual benchmark on the real index
-        let index_path = r"C:\אוצריא\index";
+        // Opt-in diagnostics may write only to an explicitly owned disposable fixture.
+        let fixture_path = crate::diagnostic_test_fixture::owned_diagnostic_index_path();
+        let index_path = fixture_path.as_str();
 
         // Check if the index exists before running the test
         if std::path::Path::new(index_path).exists() {
@@ -594,8 +596,10 @@ mod tests {
     }
 
     #[test]
+    #[ignore = "requires an explicitly owned disposable diagnostic fixture"]
     fn test_comprehensive_benchmark() {
-        let index_path = r"C:\אוצריא\index";
+        let fixture_path = crate::diagnostic_test_fixture::owned_diagnostic_index_path();
+        let index_path = fixture_path.as_str();
 
         if std::path::Path::new(index_path).exists() {
             println!("Running comprehensive benchmark...");

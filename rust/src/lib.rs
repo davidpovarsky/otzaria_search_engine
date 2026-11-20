@@ -25,3 +25,6 @@ mod lexicons;
 // flutter_rust_bridge must not generate bindings for it — Dart never supplies a corpus.
 #[cfg(feature = "semantic-integration")]
 pub mod semantic_corpus;
+
+#[cfg(test)]
+mod diagnostic_test_fixture;

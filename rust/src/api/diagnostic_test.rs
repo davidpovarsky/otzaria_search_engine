@@ -3,8 +3,10 @@ use anyhow::Result;
 use std::time::Instant;
 
 pub fn run_diagnostic_test() -> Result<()> {
-    let index_path = r"C:\אוצריא\index";
+    run_diagnostic_test_at_index(r"C:\אוצריא\index")
+}
 
+fn run_diagnostic_test_at_index(index_path: &str) -> Result<()> {
     if !std::path::Path::new(index_path).exists() {
         println!("Index not found at {}", index_path);
         return Ok(());
@@ -93,8 +95,10 @@ mod tests {
     use super::*;
 
     #[test]
+    #[ignore = "requires an explicitly owned disposable diagnostic fixture"]
     fn test_diagnostic() {
-        match run_diagnostic_test() {
+        let index_path = crate::diagnostic_test_fixture::owned_diagnostic_index_path();
+        match run_diagnostic_test_at_index(&index_path) {
             Ok(_) => println!("Diagnostic test completed successfully"),
             Err(e) => println!("Diagnostic test failed: {}", e),
         }

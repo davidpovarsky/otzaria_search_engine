@@ -1,0 +1,18 @@
+{
+  "compile_command": [
+    "rustc",
+    "--edition=2021",
+    "docs\\exact-occurrences-20261120\\diagnostic_fixture_guard_probe.rs",
+    "-o",
+    "build\\diagnostic-fixture-guard.exe"
+  ],
+  "compile_exit": 0,
+  "compile_output": "",
+  "probe_exit": 0,
+  "probe_output": "PASS rejection: missing explicit environment path\nPASS rejection: relative path\nPASS rejection: temporary directory itself is not an owned fixture\nPASS rejection: missing ownership marker\nPASS rejection: incorrect ownership declaration\nPASS rejection: index must already exist\nPASS rejection: index metadata must already exist\nPASS acceptance: explicitly owned disposable fixture path\nguard checks: 8 passed; 0 failed; no engine/index open\n",
+  "source_sha256_lf": {
+    "docs\\exact-occurrences-20261120\\diagnostic_fixture_guard_probe.rs": "e1e617fbedf4420ec0bdcb8be6d30e408fa12705974e982867063912875036a8",
+    "rust\\src\\diagnostic_test_fixture.rs": "0b5164005fb56fccda341b27fb479726ab7490426c2314ad39b849f0c42afd05"
+  },
+  "opens_search_engine": false
+}

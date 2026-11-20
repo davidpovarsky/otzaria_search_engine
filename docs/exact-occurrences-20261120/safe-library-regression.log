@@ -1,0 +1,616 @@
+   Compiling search_engine v0.1.0 (C:\Users\DAVID\Code\otzaria-search-occurrences-20261120\rust)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 39.89s
+     Running unittests src\lib.rs (rust\target\debug\deps\search_engine-7c9345451b6335dc.exe)
+
+running 364 tests
+test api::benchmark::tests::test_comprehensive_benchmark ... ignored, requires an explicitly owned disposable diagnostic fixture
+test api::benchmark::tests::test_benchmark_creation ... ok
+test api::benchmark::tests::test_run_benchmark_on_real_index ... ignored, requires an explicitly owned disposable diagnostic fixture
+test api::diagnostic_test::tests::test_diagnostic ... ignored, requires an explicitly owned disposable diagnostic fixture
+test api::focused_benchmark::tests::test_focused_benchmark ... ignored, requires an explicitly owned disposable diagnostic fixture
+test api::search_engine::tests::accumulate_section_counts_respects_the_budget ... ok
+[2026-11-20T01:09:20Z INFO  search_engine::api::search_engine] add_pdf_book 'סרוק': 0 docs from 1 pages (3 garbage lines), 36 bytes in 1.1816ms (prepare 1.0281ms, enqueue 47µs)
+[2026-11-20T01:09:20Z INFO  search_engine::api::search_engine] commit: 6.8831ms (reader reload 5.4551ms)
+test api::search_engine::tests::add_pdf_book_all_garbage_adds_nothing ... ok
+[2026-11-20T01:09:20Z INFO  search_engine::api::search_engine] add_pdf_book 'ספר': 2 docs from 2 pages (2 garbage lines), 103 bytes in 303.9µs (prepare 195.7µs, enqueue 87.3µs)
+[2026-11-20T01:09:20Z INFO  search_engine::api::search_engine] commit: 175.8382ms (reader reload 49.8537ms)
+test api::search_engine::tests::add_pdf_book_filters_garbage_and_encodes_ids ... ok
+[2026-11-20T01:09:20Z INFO  search_engine::api::search_engine] commit: 271.5975ms (reader reload 11.6239ms)
+[2026-11-20T01:09:20Z INFO  search_engine::api::search_engine] add_text_book 'בראשית': 5 docs, 129 bytes in 432.6µs (prepare 286.6µs, enqueue 116.2µs)
+test api::search_engine::tests::add_document_and_batch_normalize_like_add_text_book ... ok
+[2026-11-20T01:09:20Z INFO  search_engine::api::search_engine] add_text_book 'בראשית': 5 docs, 129 bytes in 402.2µs (prepare 266.8µs, enqueue 105.9µs)
+[2026-11-20T01:09:21Z INFO  search_engine::api::search_engine] commit: 549.4994ms (reader reload 12.0517ms)
+[2026-11-20T01:09:21Z INFO  search_engine::api::search_engine] commit: 513.6369ms (reader reload 11.7587ms)
+test api::search_engine::tests::add_text_book_builds_reference_trail_ids_and_fingerprint ... ok
+test api::search_engine::tests::add_text_book_bytes_matches_string_path ... ok
+[2026-11-20T01:09:21Z INFO  search_engine::api::search_engine] commit: 33.007ms (reader reload 791.9µs)
+test api::search_engine::tests::add_text_book_empty_text_adds_nothing ... ok
+[2026-11-20T01:09:21Z INFO  search_engine::api::search_engine] commit: 234.2306ms (reader reload 62.4184ms)
+test api::search_engine::tests::advanced_acronym_option_expands_bidirectionally ... ok
+[2026-11-20T01:09:22Z INFO  search_engine::api::search_engine] commit: 483.3883ms (reader reload 37.7793ms)
+test api::search_engine::tests::advanced_aramaic_option_matches_prefixes_and_final_swaps ... ok
+[2026-11-20T01:09:22Z INFO  search_engine::api::search_engine] commit: 202.3301ms (reader reload 22.0309ms)
+test api::search_engine::tests::advanced_custom_spacing_is_enforced_per_pair ... ok
+[2026-11-20T01:09:22Z INFO  search_engine::api::search_engine] commit: 136.1426ms (reader reload 44.1618ms)
+test api::search_engine::tests::advanced_distance_allows_full_gap_in_every_pair ... ok
+[2026-11-20T01:09:22Z INFO  search_engine::api::search_engine] commit: 103.2108ms (reader reload 45.4479ms)
+test api::search_engine::tests::advanced_per_pair_gap_verifies_across_repeated_words ... ok
+[2026-11-20T01:09:22Z INFO  search_engine::api::search_engine] commit: 130.2684ms (reader reload 32.8166ms)
+test api::search_engine::tests::advanced_per_pair_spacing_composes_with_word_options ... ok
+[2026-11-20T01:09:22Z INFO  search_engine::api::search_engine] commit: 137.9637ms (reader reload 54.7628ms)
+test api::search_engine::tests::advanced_phrase_custom_spacing_gap_is_highlighted_not_dropped ... ok
+[2026-11-20T01:09:22Z INFO  search_engine::api::search_engine] commit: 149.5204ms (reader reload 37.8793ms)
+test api::search_engine::tests::advanced_phrase_requires_query_word_order ... ok
+[2026-11-20T01:09:22Z INFO  search_engine::api::search_engine] commit: 135.9813ms (reader reload 42.7755ms)
+test api::search_engine::tests::advanced_phrase_snippet_highlights_only_adjacent_occurrence ... ok
+[2026-11-20T01:09:23Z INFO  search_engine::api::search_engine] commit: 179.8234ms (reader reload 11.9876ms)
+test api::search_engine::tests::advanced_single_word_snippet_still_highlights_every_occurrence ... ok
+[2026-11-20T01:09:23Z INFO  search_engine::api::search_engine] commit: 389.795ms (reader reload 76.1725ms)
+test api::search_engine::tests::advanced_search_matches_gershayim_tokens_end_to_end ... ok
+[2026-11-20T01:09:23Z INFO  search_engine::api::search_engine] commit: 121.5959ms (reader reload 20.5274ms)
+test api::search_engine::tests::advanced_translation_option_expands_from_dictionary ... ok
+[2026-11-20T01:09:23Z INFO  search_engine::api::search_engine] commit: 171.9239ms (reader reload 49.101ms)
+test api::search_engine::tests::advanced_typo_and_prefix_flags_work_on_gershayim_tokens ... ok
+[2026-11-20T01:09:23Z INFO  search_engine::api::search_engine] commit: 219.9037ms (reader reload 57.0223ms)
+test api::search_engine::tests::advanced_typo_only_single_word_covers_full_edit_distance ... ok
+[2026-11-20T01:09:23Z INFO  search_engine::api::search_engine] commit: 151.9084ms (reader reload 19.6315ms)
+[2026-11-20T01:09:23Z INFO  search_engine::api::search_engine] commit: 223.2943ms (reader reload 9.3852ms)
+test api::search_engine::tests::analyzers_drop_tokens_longer_than_cap ... ok
+[2026-11-20T01:09:23Z INFO  search_engine::api::search_engine] add_text_book 'ספר הבדיקה': 7 docs, 255 bytes in 457.4µs (prepare 297.1µs, enqueue 130.3µs)
+[2026-11-20T01:09:24Z INFO  search_engine::api::search_engine] commit: 669.6967ms (reader reload 30.5025ms)
+test api::search_engine::tests::any_word_in_section_scope_matches_lines_with_any_word ... ok
+[2026-11-20T01:09:24Z INFO  search_engine::api::search_engine] add_text_book 'ספר הבדיקה': 7 docs, 255 bytes in 2.1436ms (prepare 1.8047ms, enqueue 262.2µs)
+[2026-11-20T01:09:25Z INFO  search_engine::api::search_engine] commit: 536.4695ms (reader reload 17.0442ms)
+test api::search_engine::tests::any_word_matches_lines_with_a_single_query_word ... ok
+[2026-11-20T01:09:25Z INFO  search_engine::api::search_engine] add_text_book 'ספר הבדיקה': 7 docs, 255 bytes in 442.8µs (prepare 262.1µs, enqueue 128.3µs)
+[2026-11-20T01:09:25Z INFO  search_engine::api::search_engine] commit: 422.9569ms (reader reload 14.3202ms)
+test api::search_engine::tests::any_word_respects_the_negative_query ... ok
+[2026-11-20T01:09:25Z INFO  search_engine::api::search_engine] add_text_book 'ספר הבדיקה': 7 docs, 255 bytes in 431.5µs (prepare 291.7µs, enqueue 114.7µs)
+test api::search_engine::tests::advanced_typo_partial_single_word_finds_document ... ok
+[2026-11-20T01:09:26Z INFO  search_engine::api::search_engine] add_text_book 'ספר הבדיקה': 7 docs, 255 bytes in 2.0402ms (prepare 1.7908ms, enqueue 203.9µs)
+[2026-11-20T01:09:26Z INFO  search_engine::api::search_engine] commit: 440.5903ms (reader reload 19.3921ms)
+test api::search_engine::tests::any_word_snippet_highlights_the_present_word ... ok
+[2026-11-20T01:09:26Z INFO  search_engine::api::search_engine] commit: 197.6301ms (reader reload 19.6751ms)
+[2026-11-20T01:09:26Z INFO  search_engine::api::search_engine] commit: 526.2073ms (reader reload 18.4471ms)
+test api::search_engine::tests::at_least_count_is_clamped_and_defaults_to_one ... ok
+test api::search_engine::tests::bounded_groups_add_entry_evicts_worst_group ... ok
+test api::search_engine::tests::bounded_groups_cap_keeps_counting_existing_groups ... ok
+test api::search_engine::tests::bounded_groups_keep_the_best_groups_in_any_arrival_order ... ok
+[2026-11-20T01:09:27Z INFO  search_engine::api::search_engine] add_text_book 'חוזק יד': 1 docs, 67 bytes in 125.1µs (prepare 62µs, enqueue 36.5µs)
+[2026-11-20T01:09:27Z INFO  search_engine::api::search_engine] commit: 91.2491ms (reader reload 16.7019ms)
+test api::search_engine::tests::breaking_tag_in_a_line_keeps_the_words_separate ... ok
+[2026-11-20T01:09:27Z INFO  search_engine::api::search_engine] commit: 116.4406ms (reader reload 9.6271ms)
+[2026-11-20T01:09:28Z INFO  search_engine::api::search_engine] commit: 92.9324ms (reader reload 12.1885ms)
+[2026-11-20T01:09:28Z INFO  search_engine::api::search_engine] commit: 90.9274ms (reader reload 9.6714ms)
+[2026-11-20T01:09:28Z INFO  search_engine::api::search_engine] optimize: 3 → 1 segments in 136.8418ms
+test api::search_engine::tests::bulk_indexing_skips_merges_and_optimize_still_collapses ... ok
+test api::search_engine::tests::both_options_pattern_now_returns_results ... ok
+test api::search_engine::tests::compute_content_fingerprint_bytes_matches_string_form ... ok
+test api::search_engine::tests::compute_content_fingerprint_is_stable_and_never_zero ... ok
+[2026-11-20T01:09:28Z INFO  search_engine::api::search_engine] commit: 165.325ms (reader reload 44.6632ms)
+test api::search_engine::tests::char_class_and_escape_branches_match_end_to_end ... ok
+[2026-11-20T01:09:28Z INFO  search_engine::api::search_engine] commit: 313.9366ms (reader reload 14.2692ms)
+[2026-11-20T01:09:28Z INFO  search_engine::api::search_engine] commit: 40.7414ms (reader reload 13.8348ms)
+[2026-11-20T01:09:28Z INFO  search_engine::api::search_engine] commit: 27.3501ms (reader reload 6.1733ms)
+test api::search_engine::tests::delete_documents_by_file_path_removes_only_that_book ... ok
+[2026-11-20T01:09:28Z INFO  search_engine::api::search_engine] commit: 256.0429ms (reader reload 75.0843ms)
+[2026-11-20T01:09:28Z INFO  search_engine::api::search_engine] add_text_book 'ספר הבדיקה': 6 docs, 176 bytes in 514.7µs (prepare 319.7µs, enqueue 160.3µs)
+test api::search_engine::tests::dimension_facets_or_within_and_across ... ok
+[2026-11-20T01:09:28Z INFO  search_engine::api::search_engine] add_text_book 'ספר הבדיקה': 7 docs, 255 bytes in 955.1µs (prepare 546.2µs, enqueue 366.9µs)
+[2026-11-20T01:09:29Z INFO  search_engine::api::search_engine] commit: 390.7946ms (reader reload 98.3651ms)
+[2026-11-20T01:09:29Z INFO  search_engine::api::search_engine] commit: 572.49ms (reader reload 13.2925ms)
+test api::search_engine::tests::duplicate_query_words_count_once_toward_the_threshold ... ok
+[2026-11-20T01:09:29Z INFO  search_engine::api::search_engine] add_text_book 'ספר הבדיקה': 7 docs, 255 bytes in 480.8µs (prepare 315.6µs, enqueue 133.2µs)
+[2026-11-20T01:09:29Z INFO  search_engine::api::search_engine] commit: 302.5499ms (reader reload 15.0429ms)
+test api::search_engine::tests::duplicate_words_with_different_options_still_count_once ... ok
+[2026-11-20T01:09:30Z INFO  search_engine::api::search_engine] commit: 95.2252ms (reader reload 7.9227ms)
+test api::search_engine::tests::exact_phrase_snippet_highlights_only_adjacent_occurrence ... ok
+[2026-11-20T01:09:30Z INFO  search_engine::api::search_engine] commit: 187.8909ms (reader reload 14.529ms)
+[2026-11-20T01:09:30Z INFO  search_engine::api::search_engine] commit: 98.5598ms (reader reload 20.4122ms)
+test api::search_engine::tests::exact_search_gershayim_token_is_a_single_term ... ok
+[2026-11-20T01:09:30Z INFO  search_engine::api::search_engine] commit: 198.479ms (reader reload 38.1137ms)
+test api::search_engine::tests::exact_search_raw_maqaf_query_becomes_phrase ... ok
+test api::search_engine::tests::future_sidecar_schema_marks_engine_too_old ... ok
+[2026-11-20T01:09:30Z INFO  search_engine::api::search_engine] commit: 136.3605ms (reader reload 22.3602ms)
+test api::search_engine::tests::fuzzy_bridges_gershayim_and_clean_editions ... ok
+[2026-11-20T01:09:31Z INFO  search_engine::api::search_engine] commit: 183.064ms (reader reload 26.5252ms)
+test api::search_engine::tests::generation_order_can_prioritize_sources_before_commentaries ... ok
+[2026-11-20T01:09:31Z INFO  search_engine::api::search_engine] commit: 141.641ms (reader reload 16.7373ms)
+test api::search_engine::tests::get_book_fingerprints_conflicting_docs_collapse_to_zero ... ok
+[2026-11-20T01:09:31Z INFO  search_engine::api::search_engine] commit: 217.9739ms (reader reload 10.3596ms)
+[2026-11-20T01:09:31Z INFO  search_engine::api::search_engine] commit: 123.6003ms (reader reload 6.9295ms)
+[2026-11-20T01:09:31Z INFO  search_engine::api::search_engine] commit: 28.9975ms (reader reload 1.2972ms)
+test api::search_engine::tests::get_book_fingerprints_reflects_reindex_and_delete ... ok
+test api::search_engine::tests::display_highlight_distance_matches_search_distance ... ok
+[2026-11-20T01:09:32Z INFO  search_engine::api::search_engine] commit: 280.067ms (reader reload 33.6544ms)
+[2026-11-20T01:09:32Z INFO  search_engine::api::search_engine] commit: 255.3884ms (reader reload 41.9803ms)
+test api::search_engine::tests::get_book_fingerprints_returns_per_book_hash ... ok
+test api::search_engine::tests::get_book_text_fingerprint_is_zero_for_conflicting_and_pdf_books ... ok
+[2026-11-20T01:09:32Z INFO  search_engine::api::search_engine] add_text_book 'ספר': 2 docs, 27 bytes in 444.5µs (prepare 321.8µs, enqueue 74µs)
+[2026-11-20T01:09:32Z INFO  search_engine::api::search_engine] add_text_book 'ספר': 2 docs, 36 bytes in 594.8µs (prepare 476.3µs, enqueue 63.9µs)
+[2026-11-20T01:09:32Z INFO  search_engine::api::search_engine] commit: 264.2792ms (reader reload 88.1446ms)
+[2026-11-20T01:09:32Z WARN  search_engine::api::search_engine] single-word term collection truncated at 2 terms / ~2 postings (caps: 2 terms, 1000000 postings); serving the highest-priority branches collected so far
+[2026-11-20T01:09:32Z WARN  search_engine::api::search_engine] single-word term collection truncated at 3 terms / ~3 postings (caps: 3 terms, 1000000 postings); serving the highest-priority branches collected so far
+test api::search_engine::tests::global_max_expansions_enforced_across_all_branches ... ok
+[2026-11-20T01:09:32Z INFO  search_engine::api::search_engine] commit: 459.8498ms (reader reload 19.0672ms)
+test api::search_engine::tests::get_book_text_fingerprint_matches_map_form_per_book ... ok
+[2026-11-20T01:09:32Z INFO  search_engine::api::search_engine] commit: 213.1802ms (reader reload 39.4195ms)
+[2026-11-20T01:09:32Z INFO  search_engine::api::search_engine] commit: 311.8915ms (reader reload 44.508ms)
+test api::search_engine::tests::grouping_identical_text_skips_short_lines ... ok
+test api::search_engine::tests::grouping_identical_text_merges_across_books ... ok
+[2026-11-20T01:09:33Z INFO  search_engine::api::search_engine] add_text_book 'תהלים': 5 docs, 204 bytes in 428µs (prepare 281.2µs, enqueue 116.2µs)
+[2026-11-20T01:09:33Z INFO  search_engine::api::search_engine] commit: 139.191ms (reader reload 135.5367ms)
+[2026-11-20T01:09:33Z INFO  search_engine::api::search_engine] commit: 697.2293ms (reader reload 14.7873ms)
+test api::search_engine::tests::grouping_same_section_collapses_with_count ... ok
+[2026-11-20T01:09:33Z INFO  search_engine::api::search_engine] commit: 471.0242ms (reader reload 11.3734ms)
+test api::search_engine::tests::grouping_merges_across_segments_through_the_shared_accumulator ... ok
+[2026-11-20T01:09:33Z INFO  search_engine::api::search_engine] commit: 96.3129ms (reader reload 28.6661ms)
+test api::search_engine::tests::hybrid_request_falls_back_to_ranked_lexical_results_with_reason ... ok
+[2026-11-20T01:09:33Z INFO  search_engine::api::search_engine] commit: 133.9749ms (reader reload 26.3345ms)
+test api::search_engine::tests::index_fuzzy_highlight_paints_edit_distance_matches ... ok
+[2026-11-20T01:09:34Z INFO  search_engine::api::search_engine] commit: 113.4436ms (reader reload 20.8867ms)
+test api::search_engine::tests::index_highlight_falls_back_to_query_shape_when_nothing_matches ... ok
+[2026-11-20T01:09:34Z INFO  search_engine::api::search_engine] commit: 113.466ms (reader reload 45.0069ms)
+test api::search_engine::tests::index_highlight_multi_word_paints_each_words_variants ... ok
+[2026-11-20T01:09:34Z INFO  search_engine::api::search_engine] commit: 151.7033ms (reader reload 15.5492ms)
+test api::search_engine::tests::index_highlight_paints_typo_matched_term ... ok
+[2026-11-20T01:09:34Z INFO  search_engine::api::search_engine] commit: 199.5316ms (reader reload 11.9318ms)
+test api::search_engine::tests::index_highlight_plain_query_matches_exact_token ... ok
+[2026-11-20T01:09:34Z INFO  search_engine::api::search_engine] commit: 241.8158ms (reader reload 20.8262ms)
+test api::search_engine::tests::index_highlight_partial_word_uses_query_shape_substring ... ok
+test api::search_engine::tests::legacy_schema_with_current_id_but_old_file_path_requires_rebuild ... ok
+test api::search_engine::tests::legacy_tantivy_schema_without_indexed_id_requires_rebuild ... ok
+[2026-11-20T01:09:34Z INFO  search_engine::api::search_engine] commit: 150.1531ms (reader reload 9.5325ms)
+[2026-11-20T01:09:34Z ERROR search_engine::api::search_engine] regex branch compilation failed (1 chars): regex parse error:
+        [
+        ^
+    error: unclosed character class. Branch prefix: [
+test api::search_engine::tests::invalid_branch_pattern_surfaces_error ... ok
+test api::search_engine::tests::line_dedup_hash_distinguishes_digits_and_latin ... ok
+test api::search_engine::tests::line_dedup_hash_ignores_punctuation_and_spacing ... ok
+test api::search_engine::tests::missing_sidecar_uses_tantivy_schema_fallback ... ok
+[2026-11-20T01:09:34Z INFO  search_engine::api::search_engine] add_text_book 'ספר הבדיקה': 7 docs, 255 bytes in 1.7619ms (prepare 1.4703ms, enqueue 243.2µs)
+[2026-11-20T01:09:34Z INFO  search_engine::api::search_engine] commit: 218.6897ms (reader reload 44.0752ms)
+test api::search_engine::tests::lexical_fuzzy_expands_quote_bearing_token ... ok
+test api::search_engine::tests::new_writes_index_metadata_sidecar ... ok
+test api::search_engine::tests::old_sidecar_schema_requires_rebuild ... ok
+[2026-11-20T01:09:35Z INFO  search_engine::api::search_engine] add_text_book 'ספר הבדיקה': 7 docs, 255 bytes in 431.3µs (prepare 273.5µs, enqueue 132.2µs)
+[2026-11-20T01:09:35Z INFO  search_engine::api::search_engine] commit: 439.6972ms (reader reload 16.9133ms)
+test api::search_engine::tests::most_words_requires_a_majority ... ok
+[2026-11-20T01:09:35Z INFO  search_engine::api::search_engine] add_text_book 'בראשית': 5 docs, 211 bytes in 417.3µs (prepare 285.5µs, enqueue 102.2µs)
+[2026-11-20T01:09:35Z INFO  search_engine::api::search_engine] commit: 543.275ms (reader reload 51.2976ms)
+[2026-11-20T01:09:35Z INFO  search_engine::api::search_engine] commit: 425.5996ms (reader reload 57.4749ms)
+test api::search_engine::tests::partial_modes_drop_order_even_when_the_threshold_is_all_words ... ok
+[2026-11-20T01:09:35Z INFO  search_engine::api::search_engine] add_text_book 'בראשית': 5 docs, 211 bytes in 377.7µs (prepare 252.8µs, enqueue 102.1µs)
+test api::search_engine::tests::per_word_nikud_option_leaves_other_words_free ... ok
+[2026-11-20T01:09:36Z INFO  search_engine::api::search_engine] commit: 263.4514ms (reader reload 10.7547ms)
+[2026-11-20T01:09:36Z INFO  search_engine::api::search_engine] commit: 378.5043ms (reader reload 14.6908ms)
+test api::search_engine::tests::quote_free_indexing_and_ignore_quotes_option ... ok
+test api::search_engine::tests::per_word_nikud_option_routes_to_vocalized_field ... ok
+[2026-11-20T01:09:36Z INFO  search_engine::api::search_engine] add_text_book 'ספר הבדיקה': 7 docs, 255 bytes in 650.6µs (prepare 371µs, enqueue 249.6µs)
+[2026-11-20T01:09:36Z INFO  search_engine::api::search_engine] add_text_book 'ספר הבדיקה': 7 docs, 255 bytes in 626.2µs (prepare 426.1µs, enqueue 156.9µs)
+[2026-11-20T01:09:36Z INFO  search_engine::api::search_engine] commit: 587.2729ms (reader reload 16.3176ms)
+[2026-11-20T01:09:36Z INFO  search_engine::api::search_engine] commit: 582.4365ms (reader reload 17.7388ms)
+test api::search_engine::tests::same_paragraph_scope_snippet_highlights_every_word ... ok
+test api::search_engine::tests::same_paragraph_scope_matches_unordered_within_line ... ok
+[2026-11-20T01:09:36Z INFO  search_engine::api::search_engine] add_text_book 'ספר הבדיקה': 7 docs, 255 bytes in 1.0848ms (prepare 709.8µs, enqueue 327.4µs)
+[2026-11-20T01:09:36Z INFO  search_engine::api::search_engine] add_text_book 'ספר הבדיקה': 7 docs, 255 bytes in 416.7µs (prepare 258.6µs, enqueue 132.1µs)
+[2026-11-20T01:09:37Z INFO  search_engine::api::search_engine] commit: 727.1256ms (reader reload 23.9721ms)
+[2026-11-20T01:09:37Z INFO  search_engine::api::search_engine] commit: 728.523ms (reader reload 45.8309ms)
+test api::search_engine::tests::same_section_negative_scope_excludes_whole_section ... ok
+test api::search_engine::tests::same_section_scope_count_matches_search ... ok
+[2026-11-20T01:09:37Z INFO  search_engine::api::search_engine] add_text_book 'ספר הבדיקה': 7 docs, 255 bytes in 5.9009ms (prepare 575.5µs, enqueue 5.2769ms)
+test api::search_engine::tests::semantic_status_is_explicit_before_configuration ... ok
+test api::search_engine::tests::sidecar_version_match_but_schema_drift_requires_rebuild ... ok
+[2026-11-20T01:09:38Z INFO  search_engine::api::search_engine] commit: 532.7537ms (reader reload 12.5172ms)
+test api::search_engine::tests::single_alternation_matches_same_as_combined_regex ... ok
+[2026-11-20T01:09:38Z INFO  search_engine::api::search_engine] commit: 703.7108ms (reader reload 18.0916ms)
+test api::search_engine::tests::same_section_scope_matches_across_lines_under_one_heading ... ok
+[2026-11-20T01:09:39Z INFO  search_engine::api::search_engine] commit: 455.2384ms (reader reload 10.5644ms)
+test api::search_engine::tests::split_matching_parity_with_whole_pattern ... ok
+[2026-11-20T01:09:39Z INFO  search_engine::api::search_engine] commit: 201.8518ms (reader reload 25.9958ms)
+[2026-11-20T01:09:39Z INFO  search_engine::api::search_engine] commit: 18.1423ms (reader reload 6.5182ms)
+test api::search_engine::tests::test_clear_reopens_after_transient_reopen_failure ... ok
+[2026-11-20T01:09:39Z INFO  search_engine::api::search_engine] commit: 198.051ms (reader reload 26.1735ms)
+[2026-11-20T01:09:39Z WARN  search_engine::api::search_engine] single-word term collection truncated at 1 terms / ~1 postings (caps: 1 terms, 1000000 postings); serving the highest-priority branches collected so far
+test api::search_engine::tests::test_count_apis_with_status_surface_truncation ... ok
+[2026-11-20T01:09:39Z INFO  search_engine::api::search_engine] commit: 941.9886ms (reader reload 30.4636ms)
+[2026-11-20T01:09:40Z INFO  search_engine::api::search_engine] commit: 237.7757ms (reader reload 23.3766ms)
+test api::search_engine::tests::test_count_by_book_basic ... ok
+[2026-11-20T01:09:40Z WARN  search_engine::api::search_engine] single-word term collection truncated at 20000 terms / ~20000 postings (caps: 20000 terms, 1000000 postings); serving the highest-priority branches collected so far
+[2026-11-20T01:09:40Z INFO  search_engine::api::search_engine] commit: 106.9914ms (reader reload 10.1246ms)
+test api::search_engine::tests::test_count_by_book_empty_result ... ok
+[2026-11-20T01:09:40Z INFO  search_engine::api::search_engine] commit: 117.1195ms (reader reload 15.4389ms)
+[2026-11-20T01:09:40Z INFO  search_engine::api::search_engine] commit: 179.4321ms (reader reload 19.4926ms)
+test api::search_engine::tests::test_count_by_book_multi_segment ... ok
+[2026-11-20T01:09:40Z WARN  search_engine::api::search_engine] single-word term collection truncated at 20000 terms / ~20000 postings (caps: 20000 terms, 1000000 postings); serving the highest-priority branches collected so far
+[2026-11-20T01:09:40Z INFO  search_engine::api::search_engine] commit: 152.772ms (reader reload 13.3886ms)
+test api::search_engine::tests::test_count_by_book_no_cross_contamination ... ok
+[2026-11-20T01:09:41Z INFO  search_engine::api::search_engine] commit: 222.7431ms (reader reload 26.4078ms)
+test api::search_engine::tests::test_count_documents_by_file_path_basic ... ok
+test api::search_engine::tests::test_count_documents_by_file_path_empty_index ... ok
+[2026-11-20T01:09:41Z INFO  search_engine::api::search_engine] commit: 98.8166ms (reader reload 10.1865ms)
+test api::search_engine::tests::test_count_documents_by_file_path_excludes_uncommitted ... ok
+test api::search_engine::tests::test_advanced_count_apis_with_status_surface_truncation ... ok
+[2026-11-20T01:09:41Z INFO  search_engine::api::search_engine] commit: 238.1612ms (reader reload 18.202ms)
+test api::search_engine::tests::test_count_documents_by_file_path_from_reopened_index ... ok
+[2026-11-20T01:09:41Z INFO  search_engine::api::search_engine] commit: 158.3071ms (reader reload 78.1188ms)
+[2026-11-20T01:09:41Z INFO  search_engine::api::search_engine] commit: 264.2445ms (reader reload 12.7937ms)
+[2026-11-20T01:09:41Z INFO  search_engine::api::search_engine] commit: 62.1293ms (reader reload 2.3542ms)
+test api::search_engine::tests::test_count_documents_by_file_path_respects_deletes ... ok
+[2026-11-20T01:09:41Z INFO  search_engine::api::search_engine] commit: 224.85ms (reader reload 13.7681ms)
+test api::search_engine::tests::test_count_documents_by_file_path_multi_segment ... ok
+[2026-11-20T01:09:42Z INFO  search_engine::api::search_engine] commit: 127.7351ms (reader reload 11.4033ms)
+test api::search_engine::tests::test_get_document_by_id_found ... ok
+[2026-11-20T01:09:42Z INFO  search_engine::api::search_engine] commit: 163.0041ms (reader reload 16.9737ms)
+[2026-11-20T01:09:42Z INFO  search_engine::api::search_engine] commit: 24.0602ms (reader reload 4.5624ms)
+test api::search_engine::tests::test_delete_document_by_id ... ok
+[2026-11-20T01:09:42Z INFO  search_engine::api::search_engine] commit: 115.5136ms (reader reload 32.1606ms)
+test api::search_engine::tests::test_get_document_by_id_not_found ... ok
+[2026-11-20T01:09:42Z INFO  search_engine::api::search_engine] commit: 190.6253ms (reader reload 31.9292ms)
+test api::search_engine::tests::test_get_document_count ... ok
+[2026-11-20T01:09:42Z INFO  search_engine::api::search_engine] commit: 256.2687ms (reader reload 12.9707ms)
+[2026-11-20T01:09:42Z INFO  search_engine::api::search_engine] commit: 137.8112ms (reader reload 11.0138ms)
+test api::search_engine::tests::test_high_level_counts ... ok
+test api::search_engine::tests::test_lexical_fuzzy_distance_zero_stays_exact ... ok
+[2026-11-20T01:09:42Z INFO  search_engine::api::search_engine] commit: 210.7455ms (reader reload 32.9873ms)
+test api::search_engine::tests::test_lexical_fuzzy_finds_inflection_exact_does_not ... ok
+[2026-11-20T01:09:43Z INFO  search_engine::api::search_engine] commit: 625.0152ms (reader reload 13.6887ms)
+test api::search_engine::tests::test_lexical_fuzzy_exact_floor_survives_common_term ... ok
+[2026-11-20T01:09:44Z INFO  search_engine::api::search_engine] commit: 796.0631ms (reader reload 26.122ms)
+[2026-11-20T01:09:44Z INFO  search_engine::api::search_engine] commit: 848.6245ms (reader reload 37.8157ms)
+test api::search_engine::tests::test_lexical_fuzzy_highlights_literal_second_token ... ok
+[2026-11-20T01:09:44Z INFO  search_engine::api::search_engine] commit: 165.3263ms (reader reload 27.1356ms)
+test api::search_engine::tests::test_lexical_fuzzy_multi_word_relevance_differs_from_catalogue ... ok
+[2026-11-20T01:09:45Z INFO  search_engine::api::search_engine] commit: 336.3352ms (reader reload 33.5132ms)
+test api::search_engine::tests::test_lexical_fuzzy_multi_word_requires_phrase ... ok
+[2026-11-20T01:09:45Z INFO  search_engine::api::search_engine] commit: 159.8172ms (reader reload 43.6187ms)
+test api::search_engine::tests::test_lexical_fuzzy_relevance_tiers_exact_morphology_fuzzy ... ok
+[2026-11-20T01:09:46Z INFO  search_engine::api::search_engine] commit: 97.2273ms (reader reload 11.2205ms)
+[2026-11-20T01:09:46Z WARN  search_engine::api::search_engine] writer unavailable at startup (Failed to acquire Lockfile: LockBusy. Some("Failed to acquire index lock. If you are using a regular directory, this means there is already an `IndexWriter` working on this `Directory`, in this process or in a different process.")); will retry lazily
+test api::search_engine::tests::test_lexical_fuzzy_multi_word_allows_expansions_per_token ... ok
+[2026-11-20T01:09:46Z INFO  search_engine::api::search_engine] commit: 175.2465ms (reader reload 16.94ms)
+test api::search_engine::tests::test_new_tolerates_held_writer_lock ... ok
+[2026-11-20T01:09:46Z INFO  search_engine::api::search_engine] commit: 121.3404ms (reader reload 14.7571ms)
+[2026-11-20T01:09:46Z INFO  search_engine::api::search_engine] commit: 127.8829ms (reader reload 9.6772ms)
+[2026-11-20T01:09:46Z INFO  search_engine::api::search_engine] commit: 123.0129ms (reader reload 17.1798ms)
+[2026-11-20T01:09:46Z INFO  search_engine::api::search_engine] commit: 166.0442ms (reader reload 12.3106ms)
+test api::search_engine::tests::test_optimize_noop_when_single_segment ... ok
+[2026-11-20T01:09:47Z INFO  search_engine::api::search_engine] commit: 100.7613ms (reader reload 22.7402ms)
+[2026-11-20T01:09:47Z INFO  search_engine::api::search_engine] optimize: 2 → 1 segments in 353.5842ms
+test api::search_engine::tests::test_optimize_commits_pending_documents ... ok
+[2026-11-20T01:09:47Z INFO  search_engine::api::search_engine] commit: 228.387ms (reader reload 16.2045ms)
+[2026-11-20T01:09:47Z INFO  search_engine::api::search_engine] commit: 144.771ms (reader reload 13.0057ms)
+[2026-11-20T01:09:47Z INFO  search_engine::api::search_engine] commit: 141.4316ms (reader reload 26.2391ms)
+[2026-11-20T01:09:47Z INFO  search_engine::api::search_engine] commit: 145.7471ms (reader reload 15.4103ms)
+[2026-11-20T01:09:47Z INFO  search_engine::api::search_engine] commit: 184.9998ms (reader reload 21.8021ms)
+[2026-11-20T01:09:47Z INFO  search_engine::api::search_engine] optimize: 2 → 1 segments in 227.8234ms
+[2026-11-20T01:09:47Z INFO  search_engine::api::search_engine] commit: 232.3902ms (reader reload 23.1604ms)
+[2026-11-20T01:09:47Z INFO  search_engine::api::search_engine] optimize: 4 → 1 segments in 280.5204ms
+test api::search_engine::tests::test_optimize_preserves_search_results ... ok
+test api::search_engine::tests::test_optimize_preserves_upsert_and_delete_afterwards ... ok
+[2026-11-20T01:09:48Z INFO  search_engine::api::search_engine] commit: 154.4696ms (reader reload 24.6344ms)
+[2026-11-20T01:09:48Z INFO  search_engine::api::search_engine] commit: 208.6635ms (reader reload 81.33ms)
+test api::search_engine::tests::test_plain_fuzzy_relevance_ranks_exact_first ... ok
+[2026-11-20T01:09:48Z INFO  search_engine::api::search_engine] commit: 212.5789ms (reader reload 72.4688ms)
+[2026-11-20T01:09:48Z INFO  search_engine::api::search_engine] commit: 202.3925ms (reader reload 15.3491ms)
+[2026-11-20T01:09:48Z INFO  search_engine::api::search_engine] commit: 23.5428ms (reader reload 2.4604ms)
+[2026-11-20T01:09:48Z INFO  search_engine::api::search_engine] commit: 161.5608ms (reader reload 67.5557ms)
+test api::search_engine::tests::test_rollback ... ok
+[2026-11-20T01:09:48Z INFO  search_engine::api::search_engine] commit: 212.9849ms (reader reload 32.1558ms)
+[2026-11-20T01:09:49Z INFO  search_engine::api::search_engine] commit: 190.1089ms (reader reload 33.6824ms)
+[2026-11-20T01:09:49Z INFO  search_engine::api::search_engine] commit: 349.962ms (reader reload 51.4632ms)
+test api::search_engine::tests::test_search_advanced_alternative_words ... ok
+[2026-11-20T01:09:49Z INFO  search_engine::api::search_engine] commit: 130.293ms (reader reload 31.5839ms)
+[2026-11-20T01:09:49Z INFO  search_engine::api::search_engine] commit: 167.2981ms (reader reload 13.649ms)
+test api::search_engine::tests::test_search_advanced_empty_query_returns_no_results ... ok
+[2026-11-20T01:09:49Z INFO  search_engine::api::search_engine] commit: 139.8067ms (reader reload 14.1868ms)
+[2026-11-20T01:09:49Z INFO  search_engine::api::search_engine] commit: 349.6752ms (reader reload 63.2162ms)
+[2026-11-20T01:09:49Z INFO  search_engine::api::search_engine] commit: 333.2892ms (reader reload 73.0937ms)
+test api::search_engine::tests::test_search_advanced_grammatical_prefix ... ok
+[2026-11-20T01:09:50Z INFO  search_engine::api::search_engine] commit: 132.1868ms (reader reload 20.7206ms)
+[2026-11-20T01:09:50Z INFO  search_engine::api::search_engine] commit: 176.6167ms (reader reload 12.8808ms)
+[2026-11-20T01:09:50Z INFO  search_engine::api::search_engine] commit: 109.9639ms (reader reload 17.4156ms)
+[2026-11-20T01:09:50Z INFO  search_engine::api::search_engine] commit: 132.2906ms (reader reload 9.6564ms)
+[2026-11-20T01:09:50Z INFO  search_engine::api::search_engine] commit: 103.5047ms (reader reload 14.8924ms)
+[2026-11-20T01:09:50Z INFO  search_engine::api::search_engine] optimize: 12 → 1 segments in 237.323ms
+test api::search_engine::tests::test_optimize_reduces_segments_many_commits ... ok
+[2026-11-20T01:09:50Z INFO  search_engine::api::search_engine] commit: 213.4981ms (reader reload 16.9139ms)
+test api::search_engine::tests::test_search_advanced_highlights_morphological_variant ... ok
+test api::search_engine::tests::test_search_advanced_heavy_option_combo_compiles_and_runs ... ok
+[2026-11-20T01:09:51Z INFO  search_engine::api::search_engine] commit: 139.7057ms (reader reload 20.4181ms)
+test api::search_engine::tests::test_search_advanced_strips_query_nikud ... ok
+[2026-11-20T01:09:51Z INFO  search_engine::api::search_engine] commit: 296.9526ms (reader reload 11.5105ms)
+test api::search_engine::tests::test_search_and_count ... ok
+[2026-11-20T01:09:51Z INFO  search_engine::api::search_engine] commit: 197.4269ms (reader reload 11.964ms)
+[2026-11-20T01:09:51Z WARN  search_engine::api::search_engine] single-word term collection truncated at 1 terms / ~1 postings (caps: 1 terms, 1000000 postings); serving the highest-priority branches collected so far
+test api::search_engine::tests::test_search_and_count_propagates_truncation_flag ... ok
+[2026-11-20T01:09:51Z INFO  search_engine::api::search_engine] commit: 174.5439ms (reader reload 12.1571ms)
+test api::search_engine::tests::test_search_exact_single_and_phrase ... ok
+[2026-11-20T01:09:51Z INFO  search_engine::api::search_engine] commit: 138.261ms (reader reload 15.9874ms)
+test api::search_engine::tests::test_search_exact_strips_query_nikud ... ok
+[2026-11-20T01:09:51Z INFO  search_engine::api::search_engine] commit: 124.8022ms (reader reload 15.3536ms)
+test api::search_engine::tests::test_search_fuzzy_empty_query_returns_no_results ... ok
+[2026-11-20T01:09:51Z INFO  search_engine::api::search_engine] commit: 268.8982ms (reader reload 12.3816ms)
+test api::search_engine::tests::test_search_fuzzy ... ok
+[2026-11-20T01:09:52Z INFO  search_engine::api::search_engine] commit: 151.4427ms (reader reload 11.3112ms)
+test api::search_engine::tests::test_search_fuzzy_highlights_near_match_in_context ... ok
+[2026-11-20T01:09:52Z INFO  search_engine::api::search_engine] commit: 264.16ms (reader reload 13.3865ms)
+test api::search_engine::tests::test_search_fuzzy_high_level ... ok
+[2026-11-20T01:09:52Z INFO  search_engine::api::search_engine] commit: 100.7086ms (reader reload 37.7773ms)
+test api::search_engine::tests::test_search_fuzzy_invalid_distance_errors ... ok
+[2026-11-20T01:09:52Z INFO  search_engine::api::search_engine] commit: 170.9763ms (reader reload 14.6092ms)
+test api::search_engine::tests::test_search_offset ... ok
+[2026-11-20T01:09:52Z INFO  search_engine::api::search_engine] commit: 109.0164ms (reader reload 12.8383ms)
+test api::search_engine::tests::test_search_rejects_invalid_facet ... ok
+[2026-11-20T01:09:52Z WARN  search_engine::api::search_engine] magic dictionary unavailable at C:\Users\DAVID\AppData\Local\Temp\.tmpCcV5oI\nope.db: opening lexical.db at C:\Users\DAVID\AppData\Local\Temp\.tmpCcV5oI\nope.db: unable to open database file: C:\Users\DAVID\AppData\Local\Temp\.tmpCcV5oI\nope.db: Error code 14: Unable to open the database file
+test api::search_engine::tests::test_set_magic_dictionary_path_reports_validity ... ok
+[2026-11-20T01:09:52Z INFO  search_engine::api::search_engine] commit: 177.1904ms (reader reload 16.7037ms)
+test api::search_engine::tests::test_search_skips_empty_facets ... ok
+[2026-11-20T01:09:52Z INFO  search_engine::api::search_engine] commit: 151.7779ms (reader reload 24.4155ms)
+[2026-11-20T01:09:52Z WARN  search_engine::api::search_engine] single-word term collection truncated at 1 terms / ~1 postings (caps: 1 terms, 1000000 postings); serving the highest-priority branches collected so far
+test api::search_engine::tests::test_single_term_respects_max_expansions ... ok
+[2026-11-20T01:09:52Z INFO  search_engine::api::search_engine] commit: 233.0202ms (reader reload 15.1054ms)
+[2026-11-20T01:09:52Z WARN  search_engine::api::search_engine] single-word term collection truncated at 1 terms / ~1 postings (caps: 1 terms, 1000000 postings); serving the highest-priority branches collected so far
+test api::search_engine::tests::test_single_term_truncation_flag_surfaces ... ok
+[2026-11-20T01:09:53Z INFO  search_engine::api::search_engine] commit: 178.547ms (reader reload 12.4288ms)
+test api::search_engine::tests::test_stored_text_keeps_punctuation_and_highlight_lands_on_it ... ok
+[2026-11-20T01:09:53Z INFO  search_engine::api::search_engine] commit: 151.7451ms (reader reload 11.0237ms)
+[2026-11-20T01:09:53Z INFO  search_engine::api::search_engine] commit: 131.5135ms (reader reload 9.9487ms)
+[2026-11-20T01:09:53Z INFO  search_engine::api::search_engine] commit: 142.2717ms (reader reload 8.0379ms)
+test api::search_engine::tests::test_writer_reopens_after_transient_reopen_failure ... ok
+[2026-11-20T01:09:53Z INFO  search_engine::api::search_engine] add_text_book 'ספר': 2 docs, 38 bytes in 402.9µs (prepare 270.7µs, enqueue 95.2µs)
+test api::search_engine::tests::test_upsert_document ... ok
+test api::search_engine::tests::valid_sidecar_without_tantivy_meta_requires_rebuild ... ok
+[2026-11-20T01:09:53Z INFO  search_engine::api::search_engine] add_text_book 'בראשית': 5 docs, 211 bytes in 524.7µs (prepare 258.8µs, enqueue 225.6µs)
+[2026-11-20T01:09:53Z INFO  search_engine::api::search_engine] commit: 219.6128ms (reader reload 42.0238ms)
+[2026-11-20T01:09:53Z INFO  search_engine::api::search_engine] add_text_book 'ספר': 2 docs, 38 bytes in 285µs (prepare 202.7µs, enqueue 58.2µs)
+[2026-11-20T01:09:53Z INFO  search_engine::api::search_engine] commit: 435.378ms (reader reload 14.1658ms)
+[2026-11-20T01:09:53Z INFO  search_engine::api::search_engine] commit: 355.8449ms (reader reload 3.6053ms)
+test api::search_engine::tests::text_fingerprint_survives_catalogue_order_change ... ok
+[2026-11-20T01:09:53Z INFO  search_engine::api::search_engine] add_text_book 'בראשית': 5 docs, 211 bytes in 440.8µs (prepare 289.9µs, enqueue 118µs)
+test api::search_engine::tests::vocalized_advanced_prefix_option_matches_prefixed_word ... ok
+[2026-11-20T01:09:54Z INFO  search_engine::api::search_engine] add_text_book 'בראשית': 5 docs, 211 bytes in 377.5µs (prepare 250.1µs, enqueue 104.7µs)
+[2026-11-20T01:09:54Z INFO  search_engine::api::search_engine] commit: 254.7671ms (reader reload 54.6022ms)
+[2026-11-20T01:09:54Z INFO  search_engine::api::search_engine] commit: 289.8539ms (reader reload 13.2085ms)
+test api::search_engine::tests::vocalized_exact_phrase_matches_and_counts ... ok
+[2026-11-20T01:09:54Z INFO  search_engine::api::search_engine] add_text_book 'בראשית': 5 docs, 211 bytes in 680.6µs (prepare 499.3µs, enqueue 123.5µs)
+test api::search_engine::tests::vocalized_exact_requires_typed_marks_frees_untyped ... ok
+[2026-11-20T01:09:54Z INFO  search_engine::api::search_engine] add_text_book 'בראשית': 5 docs, 211 bytes in 1.1416ms (prepare 273.7µs, enqueue 831.5µs)
+[2026-11-20T01:09:55Z INFO  search_engine::api::search_engine] commit: 570.2883ms (reader reload 12.1996ms)
+[2026-11-20T01:09:55Z INFO  search_engine::api::search_engine] commit: 530.7214ms (reader reload 12.5298ms)
+test api::search_engine::tests::vocalized_flag_off_keeps_plain_behaviour ... ok
+[2026-11-20T01:09:55Z INFO  search_engine::api::search_engine] add_text_book 'בראשית': 5 docs, 211 bytes in 399.8µs (prepare 262.3µs, enqueue 106.9µs)
+test api::search_engine::tests::vocalized_fuzzy_finds_edit_distance_variants ... ok
+[2026-11-20T01:09:55Z INFO  search_engine::api::search_engine] commit: 391.996ms (reader reload 13.5605ms)
+test api::search_engine::tests::vocalized_taamim_flag_splits_classes ... ok
+[2026-11-20T01:09:55Z INFO  search_engine::api::search_engine] add_text_book 'ספר הבדיקה': 7 docs, 255 bytes in 4.2422ms (prepare 3.8834ms, enqueue 310.2µs)
+[2026-11-20T01:09:55Z INFO  search_engine::api::search_engine] commit: 331.413ms (reader reload 21.1436ms)
+test api::search_engine::tests::word_match_all_explicit_matches_default_behavior ... ok
+[2026-11-20T01:09:56Z INFO  search_engine::api::search_engine] add_text_book 'ספר הבדיקה': 7 docs, 255 bytes in 428.3µs (prepare 283.6µs, enqueue 120.1µs)
+[2026-11-20T01:09:56Z INFO  search_engine::api::search_engine] commit: 340.8634ms (reader reload 14.1254ms)
+test api::search_engine::tests::word_match_count_matches_search ... ok
+[2026-11-20T01:09:56Z INFO  search_engine::api::search_engine] add_text_book 'ספר הבדיקה': 7 docs, 255 bytes in 485.6µs (prepare 294.1µs, enqueue 156.5µs)
+[2026-11-20T01:09:56Z INFO  search_engine::api::search_engine] commit: 407.492ms (reader reload 15.8067ms)
+test api::search_engine::tests::word_match_same_section_counts_distinct_words_per_section ... ok
+test display_highlight::tests::adjacent_words_match_across_transparent_punctuation ... ok
+test display_highlight::tests::alternatives_become_branches ... ok
+test display_highlight::tests::attached_marks_class_equals_tokenizer_attached_set ... ok
+test display_highlight::tests::attached_marks_set_matches_class ... ok
+test display_highlight::tests::breaking_tag_between_the_words_is_a_separator ... ok
+test display_highlight::tests::custom_spacing_overrides_distance ... ok
+test display_highlight::tests::distance_adds_intermediate_word_allowance ... ok
+test display_highlight::tests::empty_and_nikud_only_queries_yield_none ... ok
+test display_highlight::tests::from_terms_falls_back_per_word ... ok
+test display_highlight::tests::from_terms_partial_word_uses_query_shape_substring ... ok
+test display_highlight::tests::from_terms_typo_with_expansion_keeps_matched_variants ... ok
+test display_highlight::tests::from_terms_uses_matched_terms_and_keeps_boundaries ... ok
+test display_highlight::tests::from_terms_without_any_terms_matches_query_shape_builder ... ok
+test display_highlight::tests::gershayim_stay_inside_word_like_engine_tokenizer ... ok
+test display_highlight::tests::html_tag_inside_a_word_does_not_split_it ... ok
+test display_highlight::tests::inline_tag_alone_between_the_words_never_matches ... ok
+[2026-11-20T01:10:03Z INFO  search_engine::api::search_engine] commit: 109.2577ms (reader reload 9.0129ms)
+test api::search_engine::tests::whole_pattern_compiles_under_vendored_state_limit_and_split_succeeds ... ok
+test display_highlight::tests::literal_pattern::empty_query_yields_none ... ok
+test display_highlight::tests::literal_pattern::lookahead_only_on_last_word ... ok
+test display_highlight::tests::literal_pattern::metacharacters_are_escaped ... ok
+test display_highlight::tests::literal_pattern::multi_word_joined_by_the_shared_separator ... ok
+test display_highlight::tests::literal_pattern::quote_boundary_is_context_dependent ... ok
+test display_highlight::tests::literal_pattern::quotes_match_both_forms ... ok
+test display_highlight::tests::literal_pattern::trailing_geresh_stays_consumed ... ok
+test display_highlight::tests::literal_pattern::trailing_gershayim_is_lookahead_not_consumed ... ok
+test display_highlight::tests::literal_pattern::whole_word_boundaries ... ok
+test display_highlight::tests::literal_pattern::word_separator_tolerates_maqaf ... ok
+test display_highlight::tests::missing_spacing_key_falls_back_to_max_custom_value ... ok
+test display_highlight::tests::morphological_option_disables_boundary ... ok
+test display_highlight::tests::multi_word_joined_by_separator ... ok
+test display_highlight::tests::nikud_in_query_is_ignored ... ok
+test display_highlight::tests::pattern_length_stays_bounded ... ok
+test display_highlight::tests::single_word_is_charwise_with_marks ... ok
+test display_highlight::tests::spelling_fanout_is_budget_bounded ... ok
+test display_highlight::tests::spelling_option_fans_variants ... ok
+test display_highlight::tests::terms_pattern_dedups_and_bounds_budget ... ok
+test display_highlight::tests::terms_pattern_sorts_longest_first ... ok
+test display_highlight::tests::the_three_classes_partition_every_char_by_tokenizer_rules ... ok
+test display_highlight::tests::trailing_geresh_matches_both_forms ... ok
+test exact_occurrences::tests::cancellation_after_real_positions_are_read_discards_the_accumulated_count ... ok
+[2026-11-20T01:10:05Z INFO  search_engine::api::search_engine] commit: 141.8618ms (reader reload 39.9998ms)
+test exact_occurrences::tests::cancelled_and_expired_invocations_cannot_publish_a_count ... ok
+[2026-11-20T01:10:05Z INFO  search_engine::api::search_engine] commit: 137.4346ms (reader reload 15.4534ms)
+test exact_occurrences::tests::candidate_document_budget_returns_error_instead_of_partial_count ... ok
+[2026-11-20T01:10:05Z INFO  search_engine::api::search_engine] commit: 109.5559ms (reader reload 7.6212ms)
+test exact_occurrences::tests::complete_zero_is_distinct_from_unsupported_empty_query ... ok
+[2026-11-20T01:10:05Z INFO  search_engine::api::search_engine] commit: 459.7516ms (reader reload 42.1029ms)
+test exact_occurrences::tests::count_is_not_a_page_size_or_distinct_document_count ... ok
+[2026-11-20T01:10:06Z INFO  search_engine::api::search_engine] commit: 100.7687ms (reader reload 9.0722ms)
+[2026-11-20T01:10:06Z INFO  search_engine::api::search_engine] commit: 86.3911ms (reader reload 11.3011ms)
+test exact_occurrences::tests::counts_all_original_segments_and_ignores_uncommitted_documents ... ok
+[2026-11-20T01:10:06Z INFO  search_engine::api::search_engine] commit: 128.9757ms (reader reload 8.7651ms)
+[2026-11-20T01:10:06Z INFO  search_engine::api::search_engine] optimize: 2 → 1 segments in 128.1228ms
+[2026-11-20T01:10:06Z INFO  search_engine::api::search_engine] commit: 14.8828ms (reader reload 10.0136ms)
+test exact_occurrences::tests::deleted_documents_are_excluded_and_delete_snapshot_is_retained ... ok
+test display_highlight::tests::intermediate_word_is_counted_like_the_tokenizer ... ok
+test exact_occurrences::tests::duplicate_stacked_positions_in_a_real_index_count_once ... ok
+test exact_occurrences::tests::hostile_overflow_sized_budgets_are_rejected ... ok
+test exact_occurrences::tests::missing_position_storage_is_unsupported_even_when_no_hit_exists ... ok
+test exact_occurrences::tests::one_held_searcher_snapshot_survives_a_new_commit_without_mixing_counts ... ok
+[2026-11-20T01:10:06Z INFO  search_engine::api::search_engine] commit: 146.2862ms (reader reload 25.9922ms)
+test exact_occurrences::tests::original_facet_or_within_dimension_and_and_between_dimensions ... ok
+[2026-11-20T01:10:06Z INFO  search_engine::api::search_engine] commit: 89.8267ms (reader reload 15.732ms)
+test exact_occurrences::tests::original_hebrew_marks_boundaries_and_case_normalization_are_preserved ... ok
+test exact_occurrences::tests::oversized_queries_and_facets_fail_without_an_exact_value ... ok
+[2026-11-20T01:10:07Z INFO  search_engine::api::search_engine] commit: 86.7174ms (reader reload 7.9273ms)
+test exact_occurrences::tests::position_budgets_apply_before_materializing_an_oversized_document ... ok
+[2026-11-20T01:10:07Z INFO  search_engine::api::search_engine] commit: 82.6497ms (reader reload 17.2762ms)
+test exact_occurrences::tests::quote_free_synonym_positions_are_not_double_counted ... ok
+[2026-11-20T01:10:07Z INFO  search_engine::api::search_engine] commit: 78.6455ms (reader reload 7.9948ms)
+test exact_occurrences::tests::repeated_token_counts_positions_while_original_api_stays_document_count ... ok
+[2026-11-20T01:10:07Z INFO  search_engine::api::search_engine] commit: 76.6638ms (reader reload 6.7987ms)
+test exact_occurrences::tests::segment_budget_is_checked_before_collection ... ok
+test hebrew_query::tests::all_optional_letter_word_does_not_widen_to_match_anything ... ok
+test hebrew_query::tests::alt_groups_match_plain_constants ... ok
+test hebrew_query::tests::alternative_words_are_normalized ... ok
+test hebrew_query::tests::aramaic_both_options_build_prefixed_swap_branches ... ok
+test hebrew_query::tests::aramaic_final_swap_pairs ... ok
+test hebrew_query::tests::aramaic_prefix_only_keeps_root_final_letter ... ok
+test hebrew_query::tests::aramaic_suffix_only_composes_with_other_options ... ok
+test hebrew_query::tests::aramaic_suffix_only_swaps_without_prefixes ... ok
+test hebrew_query::tests::aramaic_with_gram_suffix_carries_suffixes_on_both_variants ... ok
+test hebrew_query::tests::common_typo_covers_substitution_and_transposition ... ok
+test hebrew_query::tests::custom_spacing_handles_overflow_and_negatives ... ok
+test hebrew_query::tests::custom_spacing_overrides_distance ... ok
+test hebrew_query::tests::custom_spacing_parsed_correctly ... ok
+test hebrew_query::tests::empty_branches_are_dropped ... ok
+test hebrew_query::tests::empty_custom_spacing_falls_back_to_distance ... ok
+test hebrew_query::tests::escaped_pipe_is_not_split ... ok
+test hebrew_query::tests::full_morphology_uses_lean_prefix_group ... ok
+test hebrew_query::tests::garbage_pdf_detection_matches_dart ... ok
+test hebrew_query::tests::general_combining_marks_are_word_marks_not_attached ... ok
+test hebrew_query::tests::grammatical_prefix_option_applied ... ok
+test hebrew_query::tests::grammatical_prefix_uses_full_rich_group ... ok
+test hebrew_query::tests::latin_query_is_lowercased ... ok
+test hebrew_query::tests::maqaf_in_raw_query_separates_words ... ok
+test hebrew_query::tests::mark_classes_partition_attached_marks ... ok
+test hebrew_query::tests::max_expansions_defaults ... ok
+test hebrew_query::tests::max_expansions_grammatical_prefix_by_word_length ... ok
+test hebrew_query::tests::max_expansions_single_word_typo_with_morph_uses_morph_ceiling ... ok
+test hebrew_query::tests::max_expansions_typo_tolerance ... ok
+test hebrew_query::tests::missing_custom_spacing_entry_gets_max_custom_value ... ok
+test hebrew_query::tests::nested_alternation_stays_whole ... ok
+test hebrew_query::tests::new_ingestion_produces_identical_terms_to_old_pipeline ... ok
+test hebrew_query::tests::nikud_is_stripped_from_query ... ok
+test hebrew_query::tests::normalize_for_index_keeps_separators ... ok
+test hebrew_query::tests::normalize_for_index_strips_general_combining_marks ... ok
+test hebrew_query::tests::normalize_pdf_text_matches_text_chain_plus_invisibles ... ok
+test hebrew_query::tests::normalize_text_for_indexing_folds_presentation_forms ... ok
+test hebrew_query::tests::normalize_text_for_indexing_keeps_punctuation_strips_marks ... ok
+test hebrew_query::tests::normalize_vocalized_keeps_marks_strips_html ... ok
+test hebrew_query::tests::options_vocalized_flags_scans_all_words ... ok
+test hebrew_query::tests::parse_round_trips_generator_output ... ok
+test hebrew_query::tests::parse_splits_bare_top_level_alternation ... ok
+test hebrew_query::tests::parse_splits_capturing_group ... ok
+test hebrew_query::tests::parse_splits_non_capturing_group ... ok
+test hebrew_query::tests::patterns_have_no_anchors ... ok
+test hebrew_query::tests::patterns_never_use_unbounded_star ... ok
+test hebrew_query::tests::per_pair_gaps_survive_into_the_query ... ok
+test hebrew_query::tests::per_word_nikud_option_binds_only_that_word ... ok
+test hebrew_query::tests::per_word_option_unions_with_global_flags ... ok
+test hebrew_query::tests::phrase_words_keep_tight_caps ... ok
+test hebrew_query::tests::pipe_inside_char_class_is_not_split ... ok
+test hebrew_query::tests::plain_two_word_query_uses_distance_as_slop ... ok
+test hebrew_query::tests::plain_word_escapes_only ... ok
+test hebrew_query::tests::prepare_advanced_query_breaks_sof_pasuq_like_index ... ok
+test hebrew_query::tests::prepare_vocalized_plain_path_builds_required_mark_patterns ... ok
+test hebrew_query::tests::prepare_vocalized_single_typo_word_yields_stripped_typo_token ... ok
+test hebrew_query::tests::property_split_query_words_matches_index_analyzer ... ok
+test hebrew_query::tests::sanitize_breaking_punctuation_becomes_space ... ok
+test hebrew_query::tests::sanitize_drops_invisible_chars ... ok
+test hebrew_query::tests::sanitize_folds_typographic_quotes ... ok
+test hebrew_query::tests::sanitize_normalises_punctuation ... ok
+test exact_occurrences::tests::expiry_after_the_last_real_match_still_cannot_publish_exact_success ... ok
+test hebrew_query::tests::single_word_budget_relaxes_branch_count ... ok
+test hebrew_query::tests::spelling_variations_cap_edits_per_letter ... ok
+test hebrew_query::tests::spelling_variations_follow_the_male_haser_rules ... ok
+test hebrew_query::tests::spelling_variations_original_first_then_single_edits ... ok
+test hebrew_query::tests::spelling_with_grammatical_prefix_keeps_rich_group ... ok
+test hebrew_query::tests::split_breaks_on_hebrew_separators_like_tokenizer ... ok
+test hebrew_query::tests::split_handles_geresh_and_gershayim ... ok
+test hebrew_query::tests::split_query_words_matches_index_analyzer ... ok
+test hebrew_query::tests::strip_attached_marks_keeps_separators ... ok
+test hebrew_query::tests::strip_html_breaking_tags_become_a_space ... ok
+test hebrew_query::tests::strip_html_matches_dart ... ok
+test hebrew_query::tests::typo_branches_put_every_exact_form_before_any_typo_variant ... ok
+test hebrew_query::tests::typo_substitutions_are_nikud_free ... ok
+test hebrew_query::tests::typo_variations_respect_cap ... ok
+test hebrew_query::tests::vocalized_aramaic_uses_voc_prefix_group ... ok
+test hebrew_query::tests::vocalized_token_pattern_combining_marks_never_required ... ok
+test hebrew_query::tests::vocalized_token_pattern_requires_typed_frees_untyped ... ok
+test hebrew_query::tests::vocalized_token_pattern_taamim_class_split ... ok
+test hebrew_query::tests::vocalized_variant_passes_skip_identity ... ok
+test hebrew_query::tests::word_regex_includes_alternatives ... ok
+test hebrew_query::tests::word_regex_stays_within_length_budget ... ok
+test hebrew_tokenizer::tests::indexing_mode_emits_quote_free_twin_same_position ... ok
+test hebrew_tokenizer::tests::indexing_mode_twin_for_geresh_and_plain_words_unaffected ... ok
+test hebrew_tokenizer::tests::property_token_stream_invariants ... ok
+test hebrew_tokenizer::tests::query_mode_never_emits_twin ... ok
+test hebrew_tokenizer::tests::test_breaking_punctuation_splits_tokens ... ok
+test hebrew_tokenizer::tests::test_double_geresh_collapsed_to_gershayim ... ok
+test hebrew_tokenizer::tests::test_edge_gershayim_still_separate ... ok
+test hebrew_tokenizer::tests::test_general_combining_marks_continue_word_and_strip ... ok
+test hebrew_tokenizer::tests::test_geresh_across_transparent ... ok
+test hebrew_tokenizer::tests::test_geresh_in_middle_kept ... ok
+test hebrew_tokenizer::tests::test_gershayim_across_transparent ... ok
+test hebrew_tokenizer::tests::test_gershayim_kept_in_token ... ok
+test hebrew_tokenizer::tests::test_gershayim_span_covers_whole_token ... ok
+test hebrew_tokenizer::tests::test_hebrew_geresh_folded_to_ascii ... ok
+test hebrew_tokenizer::tests::test_hebrew_gershayim_folded_to_ascii ... ok
+test hebrew_tokenizer::tests::test_invisible_chars_are_transparent ... ok
+test hebrew_tokenizer::tests::test_maqaf_still_separates_vocalized_words ... ok
+test hebrew_tokenizer::tests::test_multiple_internal_gershayim ... ok
+test hebrew_tokenizer::tests::test_phrase_with_trailing_geresh ... ok
+test hebrew_tokenizer::tests::test_plain_words ... ok
+test hebrew_tokenizer::tests::test_presentation_forms_folded ... ok
+test hebrew_tokenizer::tests::test_quote_runs_split_by_marks_dedupe_to_single_gershayim ... ok
+test hebrew_tokenizer::tests::test_rambam ... ok
+test hebrew_tokenizer::tests::test_separators_still_split ... ok
+test hebrew_tokenizer::tests::test_standalone_word_no_geresh ... ok
+test hebrew_tokenizer::tests::test_stray_mark_does_not_open_token ... ok
+test hebrew_tokenizer::tests::test_tokens_never_contain_hebrew_geresh_forms ... ok
+test hebrew_tokenizer::tests::test_trailing_geresh_kept ... ok
+test hebrew_tokenizer::tests::test_trailing_punctuation_excluded_from_span ... ok
+test hebrew_tokenizer::tests::test_trailing_punctuation_outside_token ... ok
+test hebrew_tokenizer::tests::test_transparent_glues_like_query_sanitizer ... ok
+test hebrew_tokenizer::tests::test_typographic_quotes_folded_like_hebrew_forms ... ok
+test hebrew_tokenizer::tests::test_vocalized_keeps_general_combining_marks ... ok
+test hebrew_tokenizer::tests::test_vocalized_word_stays_single_token_and_marks_stripped ... ok
+test hebrew_tokenizer::tests::vocalized_boundaries_match_plain_tokenizer ... ok
+test hebrew_tokenizer::tests::vocalized_keeps_marks_in_tokens ... ok
+test hebrew_tokenizer::tests::vocalized_still_folds_quotes_and_presentation_forms ... ok
+test hebrew_tokenizer::tests::vocalized_transparent_still_dropped ... ok
+test lexicons::tests::acronym_cap_and_unknown ... ok
+test lexicons::tests::acronym_expands_forward_bidirectional ... ok
+test lexicons::tests::acronym_load_rejects_garbage ... ok
+test lexicons::tests::acronym_reverse_phrase_to_acronym ... ok
+test lexicons::tests::acronym_single_word_expansion_skipped ... ok
+test lexicons::tests::all_dictionaries_are_merged ... ok
+test lexicons::tests::cap_and_unknown_token ... ok
+test lexicons::tests::load_rejects_garbage ... ok
+test lexicons::tests::loads_and_translates_both_directions ... ok
+test lexicons::tests::multiword_glosses_are_skipped ... ok
+test magic::blacklist::tests::known_pair_is_blacklisted ... ok
+test magic::blacklist::tests::unrelated_pair_is_not_blacklisted ... ok
+test magic::dictionary::tests::cap_is_clamped_to_max_lexical_forms ... ok
+test hebrew_query::tests::single_word_branches_each_stay_under_dfa_limit ... ok
+test magic::dictionary::tests::open_rejects_non_database ... ok
+test magic::dictionary::tests::recall_forms_returns_index_ready_terms ... ok
+test magic::dictionary::tests::unknown_token_returns_empty ... ok
+test magic::normalize::tests::normalize_hebrew_drops_ascii_quotes_like_the_index_folds ... ok
+test magic::normalize::tests::normalize_hebrew_folds_finals ... ok
+test magic::normalize::tests::normalize_hebrew_handles_maqaf_and_gershayim ... ok
+test magic::normalize::tests::normalize_hebrew_strips_nikud_and_teamim ... ok
+test magic::normalize::tests::to_index_term_refinalizes_trailing_letter ... ok
+test magic::normalize::tests::to_index_term_skips_multiword_and_empty ... ok
+test magic::dictionary::tests::large_lemma_does_not_materialize_cross_product has been running for over 60 seconds
+test magic::dictionary::tests::large_lemma_does_not_materialize_cross_product ... ok
+
+test result: ok. 360 passed; 0 failed; 4 ignored; 0 measured; 0 filtered out; finished in 151.42s

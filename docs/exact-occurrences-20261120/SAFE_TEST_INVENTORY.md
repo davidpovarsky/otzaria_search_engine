@@ -65,3 +65,15 @@ No default test may fall back to the user's index. Report ignored/NOT_RUN separa
 from executed tests; no new corpus is needed just to turn optional diagnostics green.
 Until the separate hygiene commit is present, do not repeat the original unfiltered
 library command.
+
+## Completed separate test-hygiene follow-up
+
+The safe ordinary library suite executed 360 tests: 360 passed, 0 failed, and
+4 optional diagnostics were explicitly ignored. The repeated focused suite
+passed all 19 tests (0 failures). The separate filesystem guard probe passed
+8 checks without linking the engine. These are not Native or Apple SDK results.
+
+See TEST_HYGIENE.md and verification-hygiene.json. The earlier actual 360 PASS /
+4 FAIL run remains unchanged in its original logs and verification record.
+PRE_WRITER_FAILURE_TRACE.md contains exact original engine/Tantivy source excerpts.
+No optional real-index diagnostic was rerun after the hygiene change.

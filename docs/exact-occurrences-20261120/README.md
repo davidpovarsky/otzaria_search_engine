@@ -21,3 +21,15 @@ A separate approved test-hygiene follow-up will make these manual diagnostics ex
 ## Ownership
 
 Only 44 lines are added to original upstream files (`api/search_engine.rs` and `lib.rs`); the primitive and its tests are separate new modules. The upstream MIT license stays intact. The commit is local only: no push to `Otzaria/otzaria_search_engine`. Parent review/publication uses an explicit owner-controlled fork/pin with strict pristine checkout and artifact gates.
+
+## Completed separate test-hygiene follow-up
+
+The safe ordinary library suite executed 360 tests: 360 passed, 0 failed, and
+4 optional diagnostics were explicitly ignored. The repeated focused suite
+passed all 19 tests (0 failures). The separate filesystem guard probe passed
+8 checks without linking the engine. These are not Native or Apple SDK results.
+
+See TEST_HYGIENE.md and verification-hygiene.json. The earlier actual 360 PASS /
+4 FAIL run remains unchanged in its original logs and verification record.
+PRE_WRITER_FAILURE_TRACE.md contains exact original engine/Tantivy source excerpts.
+No optional real-index diagnostic was rerun after the hygiene change.

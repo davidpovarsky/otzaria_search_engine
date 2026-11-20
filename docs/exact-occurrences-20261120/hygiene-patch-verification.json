@@ -1,0 +1,17 @@
+{
+  "base": "fffd346555d4c4a0e487b30619aa79253b2372c3",
+  "source_paths": [
+    "rust/src/lib.rs",
+    "rust/src/api/benchmark.rs",
+    "rust/src/api/diagnostic_test.rs",
+    "rust/src/api/focused_benchmark.rs",
+    "rust/src/diagnostic_test_fixture.rs"
+  ],
+  "patch_bytes": 6870,
+  "patch_sha256": "7bd0d6c27d5fa28d8e3885782d654a209d44ca00653748e25ae49371e961e57e",
+  "artifact": "hygiene-source.patch.gz",
+  "compressed_bytes": 1996,
+  "compressed_sha256": "6d4f49e4cb67ecebd5b7519a4cf11e49b17292cb6b139841cb6d3f6622e638d7",
+  "pristine_parent_index_apply_check_exit": 0,
+  "stderr": ""
+}

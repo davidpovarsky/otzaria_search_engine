@@ -1,0 +1,37 @@
+{
+  "source_parent": "fffd346555d4c4a0e487b30619aa79253b2372c3",
+  "command": [
+    "cargo",
+    "test",
+    "--locked",
+    "--manifest-path",
+    "rust/Cargo.toml",
+    "--lib",
+    "exact_occurrences::tests",
+    "--",
+    "--test-threads=2"
+  ],
+  "exit": 0,
+  "started_utc": "2026-11-20T01:11:52.007405+00:00",
+  "seconds": 4.03,
+  "source_sha256_lf": {
+    "rust/src/lib.rs": "9c462be414fe668eeb7103cd71420bcf8dcf2ccd4c8f8f3058e34997541fd1dc",
+    "rust/src/api/search_engine.rs": "59a6ae51a038780d8a78d19952087b735e096373394347affc02160765973f75",
+    "rust/src/exact_occurrences.rs": "c0a1374c9b58450e73ee84fafe0f4b7555fe22e29651f25ccc43b98a7fd6a757",
+    "rust/src/exact_occurrences/tests.rs": "431f127619ac594c8a09096bbdf2a03627a57148080f1b92486169da1913739e",
+    "rust/src/api/benchmark.rs": "ee53c2865eaa906b7c1b0c9883e09a0b1ec396d60d061d9c2252b01665667cf8",
+    "rust/src/api/diagnostic_test.rs": "958e65490ecb4e72cca3a4924caacb6730e022e84453a3e0e64bc4db6b36962a",
+    "rust/src/api/focused_benchmark.rs": "d6f0895e2c40c30527bd72bf12364dc7c38aaf7a84d4df48c8829b02e87e48c3",
+    "rust/src/diagnostic_test_fixture.rs": "0b5164005fb56fccda341b27fb479726ab7490426c2314ad39b849f0c42afd05",
+    "rust/src/frb_generated.rs": "fe47a4916b97877b2fc3fe81109c36a0fa9696d449dae4fb8493721947a11a54",
+    "rust/Cargo.toml": "3e9584afbfb53cd97ae08371ae17831c59652f12b6073f6ed1756d7e5e1f586d",
+    "rust/Cargo.lock": "d8cf629b23f9bf53028ddcca6f27ef7fdf8a0ee1e6e5807050c7f3d3eb5b04da"
+  },
+  "test_summary": [
+    "test result: ok. 19 passed; 0 failed; 0 ignored; 0 measured; 345 filtered out; finished in 2.98s"
+  ],
+  "explicit_fixture_environment": "unset",
+  "user_index_opened": false,
+  "native_or_apple_sdk": false,
+  "user_index_open_evidence": "inspected test inventory plus four framework-ignored diagnostics and no ambient-wrapper test call; not an OS file-event trace"
+}
